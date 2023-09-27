@@ -1,13 +1,15 @@
 import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import axios from 'axios';
 
 @Injectable()
 export class GithubService {
-  private readonly apiUrl = 'https://api.github.com';
+  constructor(private readonly configService: ConfigService) {}
 
   async getCommits(owner: string, repo: string) {
+    const apiUrl = this.configService.get<string>('GITHUB_API_URL');
     const response = await axios.get(
-      `${this.apiUrl}/repos/${owner}/${repo}/commits`,
+      `${apiUrl}/repos/${owner}/${repo}/commits`,
     );
 
     return response.data;
