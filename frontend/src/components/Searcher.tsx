@@ -15,7 +15,6 @@ const Searcher = () => {
       const response = await axios.get<Commit[]>(
         `${import.meta.env.VITE_API_URL}/github/commits/${owner}/${repo}`
       );
-      console.log(response.data);
       setCommits(response.data);
       setShowTable(true);
     } catch (error) {
