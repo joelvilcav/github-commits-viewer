@@ -1,4 +1,6 @@
-const CommitsTable = ({ commits }) => {
+import Commit from "../interfaces/commit.interface";
+
+const CommitsTable: React.FC<CommitsTableProps> = ({ commits }) => {
   return (
     <div className='flex justify-around'>
       <table className='border-collapse border border-gray-800 w-full'>
@@ -31,7 +33,7 @@ const CommitsTable = ({ commits }) => {
                 {commit.commit.author.name}
               </td>
               <td className='border border-gray-800 p-2'>
-                {commit.commit.author.date.split('T')[0]}
+                {commit.commit.author.date.toString().split('T')[0]}
               </td>
             </tr>
           ))}
@@ -40,5 +42,9 @@ const CommitsTable = ({ commits }) => {
     </div>
   );
 };
+
+type CommitsTableProps = {
+  commits: Commit[]
+}
 
 export default CommitsTable;

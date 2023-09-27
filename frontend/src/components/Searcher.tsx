@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import axios from 'axios';
 import CommitsTable from './CommitsTable';
+import Commit from '../interfaces/commit.interface';
 
 const Searcher = () => {
   const [owner, setOwner] = useState<string>('joelvilcav');
   const [repo, setRepo] = useState<string>('github-commits-viewer');
   const [showTable, setShowTable] = useState<boolean>(false);
-  const [commits, setCommits] = useState<Array<unknown>>([]);
+  const [commits, setCommits] = useState<Commit[]>([]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.get<Array<unknown>>(
+      const response = await axios.get<Commit[]>(
         `${import.meta.env.VITE_API_URL}/github/commits/${owner}/${repo}`
       );
       console.log(response.data);
