@@ -16,13 +16,10 @@ const Searcher = () => {
       );
       console.log(response.data);
       setCommits(response.data);
+      setShowTable(true);
     } catch (error) {
       console.error(error);
     }
-  };
-
-  const toggleTable = () => {
-    setShowTable(!showTable);
   };
 
   return (
@@ -58,7 +55,6 @@ const Searcher = () => {
           />
           <button
             type='submit'
-            onClick={toggleTable}
             className='bg-blue-800 px-5 py-2 rounded-md text-white ml-5'
           >
             Get info!
