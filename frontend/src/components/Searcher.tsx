@@ -28,7 +28,7 @@ const Searcher = () => {
         <form onSubmit={handleSubmit} className='mb-8'>
           <label
             htmlFor='username'
-            className='block mb-2 text-sm font-bold text-gray-900 dark:text-white'
+            className='block mb-2 text-md font-bold text-gray-900 dark:text-white'
           >
             Username:
           </label>
@@ -42,7 +42,7 @@ const Searcher = () => {
           />
           <label
             htmlFor='username'
-            className='block mb-2 text-sm font-bold text-gray-900 dark:text-white mt-5'
+            className='block mb-2 text-md font-bold text-gray-900 dark:text-white mt-5'
           >
             Repository:
           </label>
@@ -51,11 +51,11 @@ const Searcher = () => {
             placeholder='repo name'
             value={repo}
             onChange={(e) => setRepo(e.target.value)}
-            className='bg-gray-100 border border-black px-4 py-2 rounded-md'
+            className='bg-gray-100 border border-black px-4 py-2 rounded-md mt-0'
           />
           <button
             type='submit'
-            className='bg-blue-800 px-5 py-2 rounded-md text-white ml-5'
+            className='bg-blue-800 px-5 py-2 rounded-md text-white ml-0 min-[400px]:ml-5'
           >
             Get info!
           </button>

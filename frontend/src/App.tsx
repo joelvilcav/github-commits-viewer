@@ -2,8 +2,8 @@ import Searcher from './components/Searcher';
 
 function App() {
   return (
-    <div className='flex min-h-screen'>
-      <div className='w-1/4 bg-blue-800 px-5 py-10'>
+    <div className='flex flex-col sm:flex-row min-h-screen'>
+      <div className='sm:w-1/4 bg-blue-800 px-5 py-10'>
         <h2 className='text-4xl font-black text-center text-white'>
           GitHub Commits Viewer
         </h2>
@@ -15,7 +15,7 @@ function App() {
           information.
         </p>
       </div>
-      <div className='w-3/4 p-10 h-screen overflow-scroll'>
+      <div className='sm:w-3/4 p-10 h-screen overflow-y-scroll'>
         <Searcher />
       </div>
     </div>
