@@ -1,5 +1,4 @@
-import './App.css'
-import Searcher from './components/Commits'
+import Searcher from './components/Searcher'
 
 function App() {
 
