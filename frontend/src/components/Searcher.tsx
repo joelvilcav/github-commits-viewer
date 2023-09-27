@@ -28,21 +28,40 @@ const Searcher = () => {
   return (
     <>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='mb-8'>
+          <label
+            htmlFor='username'
+            className='block mb-2 text-sm font-bold text-gray-900 dark:text-white'
+          >
+            Username:
+          </label>
           <input
             type='text'
+            id='username'
             placeholder='username'
             value={owner}
             onChange={(e) => setOwner(e.target.value)}
+            className='bg-gray-100 border border-black px-4 py-2 rounded-md'
           />
+          <label
+            htmlFor='username'
+            className='block mb-2 text-sm font-bold text-gray-900 dark:text-white mt-5'
+          >
+            Repository:
+          </label>
           <input
             type='text'
             placeholder='repo name'
             value={repo}
             onChange={(e) => setRepo(e.target.value)}
+            className='bg-gray-100 border border-black px-4 py-2 rounded-md'
           />
-          <button type='submit' onClick={toggleTable}>
-            Get Commits
+          <button
+            type='submit'
+            onClick={toggleTable}
+            className='bg-blue-800 px-5 py-2 rounded-md text-white ml-5'
+          >
+            Get info!
           </button>
         </form>
       </div>
