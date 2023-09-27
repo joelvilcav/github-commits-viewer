@@ -74,7 +74,7 @@ cd frontend/
 
 ```sh
 //.env file
-VITE_API_URL = http://localhost:5173
+VITE_API_URL = http://localhost:3000
 ```
 
 3.3 Install the dependencies
