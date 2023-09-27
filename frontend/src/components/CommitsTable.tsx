@@ -4,7 +4,7 @@ const CommitsTable = ({ commits }) => {
       <thead>
         <tr>
           <th className="bg-gray-200 border border-gray-800 p-1 px-3">ID</th>
-          <th className="bg-gray-200 border border-gray-800 p-1">Commit's name</th>
+          <th className="bg-gray-200 border border-gray-800 p-1">Commits' name</th>
           <th className="bg-gray-200 border border-gray-800 p-1">Author</th>
           <th className="bg-gray-200 border border-gray-800 p-1">Commiter</th>
           <th className="bg-gray-200 border border-gray-800 p-1">Date</th>
