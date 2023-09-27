@@ -12,7 +12,7 @@ const Searcher = () => {
     e.preventDefault();
     try {
       const response = await axios.get<Array<unknown>>(
-        `http://localhost:3000/github/commits/${owner}/${repo}`
+        `${import.meta.env.VITE_API_URL}/github/commits/${owner}/${repo}`
       );
       console.log(response.data);
       setCommits(response.data);
