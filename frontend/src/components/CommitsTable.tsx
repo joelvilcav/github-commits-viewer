@@ -1,23 +1,23 @@
 const CommitsTable = ({ commits }) => {
   return (
-    <table>
+    <table className="border-collapse border border-gray-800 w-full">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Commit's name</th>
-          <th>Author</th>
-          <th>Commiter</th>
-          <th>Date</th>
+          <th className="bg-gray-200 border border-gray-800 p-1 px-3">ID</th>
+          <th className="bg-gray-200 border border-gray-800 p-1">Commit's name</th>
+          <th className="bg-gray-200 border border-gray-800 p-1">Author</th>
+          <th className="bg-gray-200 border border-gray-800 p-1">Commiter</th>
+          <th className="bg-gray-200 border border-gray-800 p-1">Date</th>
         </tr>
       </thead>
       <tbody>
         {commits.map((commit) => (
-            <tr key={commit.sha}>
-                <td>{commit.sha}</td>
-                <td>{commit.commit.message}</td>
-                <td>{commit.author.login}</td>
-                <td>{commit.commit.author.name}</td>
-                <td>{commit.commit.author.date}</td>
+            <tr key={commit.sha} className="border border-gray-800">
+                <td className="border border-gray-800 p-2">{commit.sha}</td>
+                <td className="border border-gray-800 p-2">{commit.commit.message}</td>
+                <td className="border border-gray-800 p-2">{commit.author.login}</td>
+                <td className="border border-gray-800 p-2">{commit.commit.author.name}</td>
+                <td className="border border-gray-800 p-2">{commit.commit.author.date}</td>
             </tr>
         ))}
       </tbody>
