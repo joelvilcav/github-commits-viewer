@@ -41,13 +41,14 @@ const Searcher = () => {
             className='bg-gray-100 border border-black px-4 py-2 rounded-md'
           />
           <label
-            htmlFor='username'
+            htmlFor='repository'
             className='block mb-2 text-md font-bold text-gray-900 dark:text-white mt-5'
           >
             Repository:
           </label>
           <input
             type='text'
+            id='repository'
             placeholder='repo name'
             value={repo}
             onChange={(e) => setRepo(e.target.value)}
