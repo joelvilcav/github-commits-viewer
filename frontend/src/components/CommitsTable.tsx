@@ -17,7 +17,7 @@ const CommitsTable = ({ commits }) => {
                 <td className="border border-gray-800 p-2">{commit.commit.message}</td>
                 <td className="border border-gray-800 p-2">{commit.author.login}</td>
                 <td className="border border-gray-800 p-2">{commit.commit.author.name}</td>
-                <td className="border border-gray-800 p-2">{commit.commit.author.date}</td>
+                <td className="border border-gray-800 p-2">{commit.commit.author.date.split("T")[0]}</td>
             </tr>
         ))}
       </tbody>
